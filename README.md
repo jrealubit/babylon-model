@@ -1,1 +1,2 @@
-# babylon-models
+# babylon-basic
+Basic babylon document
