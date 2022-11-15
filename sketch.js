@@ -17,7 +17,7 @@ var createScene = function () {
     var scene = new BABYLON.Scene(engine);
 
     // This creates and positions a free camera (non-mesh)
-    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 10, 0), scene);
+    var camera = new BABYLON.FreeCamera("camera1", new BABYLON.Vector3(0, 0, -10), scene);
 
     // This targets the camera to scene origin
     camera.setTarget(BABYLON.Vector3.Zero());
@@ -31,8 +31,9 @@ var createScene = function () {
     // Default intensity is 1. Let's dim the light a small amount
     light.intensity = 0.7;
 
-    var newsphere = createSphere(0, 1, 0, 2);
-    newsphere.material = hexMat('#ff0000');
+    // var newsphere = createSphere(0, 1, 0, 2);
+    // newsphere.material = hexMat('#ff0000');
+    var boomBox = new meshModel('boombox.glb' , 10);
     
     return scene;
 };
